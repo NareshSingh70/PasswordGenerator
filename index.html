@@ -11,70 +11,72 @@
 
 <body>
 
-    <div class="container">
+    <div class="wrapper">
+        <div class="container">
 
-        <!-- Heading -->
-        <h1>Password Generator</h1>
+            <!-- Heading -->
+            <h1>Password Generator</h1>
 
-        <!-- Password Display -->
-        <div class="display-container">
+            <!-- Password Display -->
+            <div class="display-container">
 
-            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+                <input readonly value=" Love Babber" placeholder="Password" class="display" data-passwordDisplay>
 
-            <!-- Button For Click To Copy Clipboard -->
-            <button class="copyBtn" data-copy>
-                <span data-copyMsg></span>
-                <img src="assets/copy.svg" alt="copy" width="23" height="23">
-            </button>
+                <!-- Button For Click To Copy Clipboard -->
+                <button class="copyBtn" data-copy>
+                    <span class="tooltip" data-copyMsg></span>
+                    <img src="assets/copy.svg" alt="copy" width="23" height="23">
+                </button>
+
+            </div>
+
+            <!--  -->
+            <div class="input-container">
+
+                <!-- Password Length Section -->
+                <div class="length-container">
+
+                    <p>Password</p>
+                    <p data-lengthNumber>0</p>
+
+                </div>
+
+                <!-- Slider -->
+                <input type="range" min="0" max="20" step="1" class="slider" data-lengthSlider>
+
+                <!-- Checkboxes -->
+                <div class="check">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Include Uppercse Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="Number">
+                    <label for="Number">Include Number</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+
+
+                <!-- Password Strength Seection -->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div class="indicator" data-indicator></div>
+                </div>
+
+                <!-- Generator Password -->
+                <button class="generateBtn">Generator Password</button>
+            </div>
 
         </div>
-
-        <!--  -->
-        <div class="input-container">
-
-            <!-- Password Length Section -->
-            <div class="length-container">
-
-                <p>Password</p>
-                <p data-lengthNumber>0</p>
-
-            </div>
-
-            <!-- Slider -->
-            <input type="range" min="0" max="20" step="1" data-lengthSlider>
-
-            <!-- Checkboxes -->
-            <div>
-                <input type="checkbox" id="uppercase">
-                <label for="uppercase">Include Uppercse Letters</label>
-            </div>
-
-            <div>
-                <input type="checkbox" id="lowercase">
-                <label for="lowercase">Include Lowercase Letters</label>
-            </div>
-
-            <div>
-                <input type="checkbox" id="Number">
-                <label for="Number">Include Number</label>
-            </div>
-
-            <div>
-                <input type="checkbox" id="symbols">
-                <label for="symbols">Include Symbols</label>
-            </div>
-
-
-            <!-- Password Strength Seection -->
-            <div class="strength-container">
-                <p>Strength</p>
-                <div data-indicator></div>
-            </div>
-
-            <!-- Generator Password -->
-            <button class="generateBtn">Generator Password</button>
-        </div>
-
     </div>
 
     <!-- Costom Js Link -->

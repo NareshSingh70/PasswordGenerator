@@ -13,7 +13,7 @@ const symbolCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateBtn");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
-const symbols = '`~!@#$%^&*()_-+{}[]<>?/'
+const symbols = '~!@$%&()_-{}[]<>?'
 
 let password = "";
 let passwordLength = 10;
@@ -21,6 +21,8 @@ let passwordLength = 10;
 let checkCount = 0;
 handalSlider()
 //set strength cricle color to gray
+setIndicator("#ccc");
+
 
 //Set Password Length 
 function handalSlider() {
@@ -28,12 +30,17 @@ function handalSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
     //or kuch bhi karna chahiye
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ((passwordLength - min) * 100 / (max - min)) + "% 100%"
 
 }
 
 function setIndicator(color) {
     indicator.style.backgroundColor = color;
     //shadow Hw
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
+
 }
 
 function getRndInterger(min, max) {
